@@ -1,0 +1,119 @@
+/* GENERAL STYLES */
+.flex-grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	margin: 0 auto;
+}
+
+.flex-grid .grid-item {
+	position: relative;
+	color: #000;
+	flex: 0 0 calc(25% - 0.35rem);
+	margin-bottom: 0.7rem;
+	z-index: 10;
+}
+
+.flex-grid .grid-item.has-bio:hover,
+.flex-grid div.grid-item.has-bio:hover {
+	cursor: pointer;
+}
+
+.grid-item .image-holder {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	transition: opacity 0.45s ease;
+}
+
+.grid-item .image-holder .ratio {
+	transition: opacity 0.45s ease;
+}
+.flex-grid.team .grid-item:hover .image-holder .ratio {
+	opacity: 0.65;
+	transition: opacity 0.25s ease;
+}
+
+.grid-item .image-holder img {
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	-o-object-fit: cover;
+	object-fit: cover;
+	font-family: "object-fit: cover;";
+}
+
+/* ===== OVERLAY STYLES ====== */
+.overlay-container.bio-overlay .grid-item figcaption {
+	margin: 1rem 0 0;
+}
+.overlay-container.bio-overlay .grid-item figcaption > * {
+	color: var(--dark-cream);
+	transition: color 1s ease;
+}
+.overlay-container.bio-overlay .grid-item h3 {
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
+}
+.overlay-container.bio-overlay .grid-item h4 {
+	font-style: italic;
+	margin: 0;
+	font-size: 1rem;
+}
+.overlay-container.bio-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	left: 0;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	height: 100svh;
+	height: 100dvh;
+	width: 100%;
+	background-color: var(--cream);
+	z-index: 1100;
+	opacity: 0;
+	transform: translateX(-100vw);
+	pointer-events: none;
+	transition: opacity 0.45s ease-in-out, transform 0s 0.45s;
+}
+.reveal-bio .overlay-container.bio-overlay {
+	opacity: 1;
+	transform: translateX(0);
+	pointer-events: all;
+	transition: opacity 1s ease-in-out, transform 0s;
+}
+.overlay-container.bio-overlay .description-container {
+	max-width: 37rem;
+	font-size: 1.05rem;
+	padding: 5rem var(--site-padding-left);
+	color: var(--dark-cream);
+}
+.overlay-container.bio-overlay .description-container button {
+	color: var(--dark-cream);
+	font-style: italic;
+	transition: color 1s ease;
+}
+.overlay-container.bio-overlay .description-container button:hover {
+	color: #000;
+	cursor: pointer;
+	transition: color 0.75s ease-in-out;
+}

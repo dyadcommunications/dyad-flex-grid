@@ -1,0 +1,13 @@
+{
+	"name": "acf/flex-grid",
+	"title": "Flex Grid",
+	"description": "A grid of items",
+	"style": ["file:./flex-grid.css"],
+	"category": "media",
+	"icon": "layout",
+	"keywords": ["image", "grid", "flex", "project", "profile", "display"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "flex-grid.php"
+	}
+}
