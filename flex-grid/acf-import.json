@@ -2,7 +2,55 @@
     {
         "key": "group_636d72bc03ba6",
         "title": "Block: Flex Grid",
-        "fields": [],
+        "fields": [
+            {
+                "key": "field_65329218449d7",
+                "label": "Images per row",
+                "name": "images_per_row",
+                "aria-label": "",
+                "type": "range",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 3,
+                "min": 1,
+                "max": 5,
+                "step": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_65368e424b063",
+                "label": "Image orientation",
+                "name": "image_orientation",
+                "aria-label": "",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "natural": "Natural",
+                    "vertical": "Vertical",
+                    "horizontal": "Horizontal"
+                },
+                "default_value": "natural",
+                "return_format": "value",
+                "allow_null": 0,
+                "other_choice": 0,
+                "layout": "vertical",
+                "save_other_choice": 0
+            }
+        ],
         "location": [
             [
                 {
