@@ -1,0 +1,97 @@
+/* ===== GRID ITEM BLOCK STYLES ====== */
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item {
+	flex: 0 0 calc(33% - 2.25rem);
+	margin-bottom: 4rem;
+}
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item .image-holder .ratio {
+	background-color: var(--cream);
+}
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item > * {
+	pointer-events: none;
+}
+
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item figcaption {
+	margin: 1rem 0 0;
+}
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item figcaption > * {
+	color: var(--dark-cream);
+	transition: color 1s ease;
+}
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item h3 {
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
+}
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item h4 {
+	font-style: italic;
+	margin: 0;
+	font-size: 1rem;
+}
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item .description-container {
+	display: block;
+}
+@media screen and (min-width: 37.5em) {
+	.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item .description-container {
+		display: none;
+	}
+}
+/* ===== CMS/WORDPRESS-SPECIFIC STYLES ====== */
+.wp-admin .dyad-flex-grid-innerblock.acf-innerblocks-container .wp-block {
+	position: relative;
+	color: #000;
+	flex: 0 0 calc(33% - 0.35rem);
+	margin-bottom: 0.7rem;
+	z-index: 10;
+}
+.wp-admin #team .dyad-flex-grid-innerblock.acf-innerblocks-container .wp-block {
+	flex: 0 0 calc(33% - 2.25rem);
+}
+.acf-notify {
+	display: flex;
+	justify-content: center;
+	-webkit-flex-align: center;
+	align-items: center;
+	padding: 0;
+	text-align: center;
+	background: #efefef;
+	font-size: 1rem;
+	letter-spacing: 0;
+	flex: 1 0 0%;
+	height: 100%;
+}
+.acf-block-preview .acf-notify .ratio p {
+	font-size: 0.8rem;
+}
+.acf-notify .ratio p {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+.acf-notify .acf-button {
+	filter: grayscale();
+	background: #f0f0f1;
+	opacity: 0.4;
+	pointer-events: none !important;
+}
+.is-selected .acf-notify .acf-button {
+	background: #f6f7f7;
+	filter: none;
+	opacity: 1;
+	pointer-events: all !important;
+}
+.is-selected .ratio .acf-actions.-hover {
+	display: block;
+}
+.acf-block-preview.wp-block-acf-dyad-image,
+.acf-block-preview.wp-block-acf-dyad-image figure {
+	height: 100%;
+}
+.is-even .acf-block-preview.wp-block-acf-dyad-image {
+	height: auto;
+}

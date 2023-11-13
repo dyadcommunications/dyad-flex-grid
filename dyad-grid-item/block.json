@@ -1,0 +1,14 @@
+{
+	"name": "acf/dyad-grid-item",
+	"title": "Dyad Grid Item",
+	"description": "A custom Dyad Grid Item block.",
+	"style": ["file:./dyad-grid-item.css"],
+	"editorScript": "file:./dyad-grid-item.js",
+	"category": "formatting",
+	"icon": "camera",
+	"keywords": ["image", "grid item", "dyad", "flex grid", "grid"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "dyad-grid-item.php"
+	}
+}
