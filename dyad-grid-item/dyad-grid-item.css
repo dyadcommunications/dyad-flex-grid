@@ -1,10 +1,13 @@
 /* ===== GRID ITEM BLOCK STYLES ====== */
 .dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item {
-	flex: 0 0 calc(33% - 2.25rem);
+	flex: 0 0 calc(var(--images-per-row, 33%) - 0.25rem);
 	margin-bottom: 4rem;
 }
 .dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item .image-holder .ratio {
-	background-color: var(--cream);
+	background-color: var(--brown);
+}
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item.has-bio:hover .ratio img {
+	opacity: 0.8;
 }
 .dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item > * {
 	pointer-events: none;
@@ -13,19 +16,22 @@
 .dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item figcaption {
 	margin: 1rem 0 0;
 }
-.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item figcaption > * {
-	color: var(--dark-cream);
-	transition: color 1s ease;
+.dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item.has-bio:hover figcaption {
+	opacity: 1;
+	transition: opacity 0.35s ease-in;
 }
+
 .dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item h3 {
 	text-transform: uppercase;
-	font-size: 0.9rem;
+	font-size: 1.1em;
 	letter-spacing: 0.1rem;
 }
 .dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item h4 {
-	font-style: italic;
 	margin: 0;
-	font-size: 1rem;
+	text-transform: uppercase;
+	font-family: var(--apparat);
+	font-size: 0.75em;
+	letter-spacing: 0.1em;
 }
 .dyad-flex-grid-innerblock.acf-innerblocks-container .grid-item .description-container {
 	display: block;
@@ -35,16 +41,17 @@
 		display: none;
 	}
 }
+
 /* ===== CMS/WORDPRESS-SPECIFIC STYLES ====== */
 .wp-admin .dyad-flex-grid-innerblock.acf-innerblocks-container .wp-block {
 	position: relative;
 	color: #000;
-	flex: 0 0 calc(33% - 0.35rem);
+	flex: 0 0 calc(var(--images-per-row, 33%) - 0.35rem);
 	margin-bottom: 0.7rem;
 	z-index: 10;
 }
-.wp-admin #team .dyad-flex-grid-innerblock.acf-innerblocks-container .wp-block {
-	flex: 0 0 calc(33% - 2.25rem);
+.wp-admin #profile-grid-container .dyad-flex-grid-innerblock.acf-innerblocks-container .wp-block {
+	flex: 0 0 calc(var(--images-per-row, 33%) - 0.25rem);
 }
 .acf-notify {
 	display: flex;

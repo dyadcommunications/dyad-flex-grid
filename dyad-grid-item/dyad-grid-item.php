@@ -9,6 +9,7 @@
 // Create class attribute allowing for custom "className" and "align" values.
 $className = "grid-item";
 $imageClassName = 'dyad-image image-holder';
+$block_styles = "";
 
 if (!empty($block['className'])) {
 	$className .= ' ' . $block['className'];
@@ -45,8 +46,11 @@ if ($image) {
 	// Container Styles | figure.image-holder > .ratio > img
 	$padding_top = $h / $w * 100;
 	$padding_value = "--padding: $padding_top%;";
+	$block_styles .= " " . $padding_value;
 	// $padding_styles = " style='padding-top: $padding_top%;'"; // goes on image parent (.ratio)
+
 	$flex_ratio = "--ratio: $r;";
+	$block_styles .= " " . $flex_ratio;
 	// $flex_styles = " style='flex: $r 1 0%;'"; // goes on image grandparent (figure.image-holder)
 
 	$focal_point_x = get_field('focal_point_x') ?? 50;
@@ -61,7 +65,7 @@ $descriptive_text = get_field('descriptive_text');
 if ($descriptive_text) $className .= " has-bio";
 ?>
 <div class="<?= $className ?>">
-	<figure id="<?= esc_attr($id); ?>" class="<?= esc_attr($imageClassName) ?>" style="<?= $padding_value . $flex_ratio; ?>">
+	<figure id="<?= esc_attr($id); ?>" class="<?= esc_attr($imageClassName) ?>" style="<?= $block_styles; ?>">
 		<?php if ($image) : ?>
 			<div class="ratio">
 				<?php if (is_admin()) : ?>
